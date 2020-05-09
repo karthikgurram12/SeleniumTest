@@ -9,13 +9,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 public class Task3 extends BaseImplementation{
 
-	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
        // Drag me to my target and drop on the target and verify the text.
-		Task3 ob=new Task3();
+		@Test
+		public void test3() throws IOException {
+		Task1 ob=new Task1();
 		Properties obj=ob.ReadObjectRepo();
 		WebDriver driver=ob.driver();
 		driver.get("https://demoqa.com/droppable/");

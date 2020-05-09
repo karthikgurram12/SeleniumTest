@@ -13,16 +13,17 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import au.com.bytecode.opencsv.CSVReader;
 
 public class Task2 extends BaseImplementation{
-
-	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		//Please fill this contact form using CSS and Xpath.
-		Task2 ob=new Task2();
-		Properties obj=ob.ReadObjectRepo();
+		@Test
+public void test2() throws IOException {
+    Task1 ob=new Task1();
+	Properties obj=ob.ReadObjectRepo();
 	WebDriver driver=ob.driver();
 	driver.get("https://demoqa.com/html-contact-form/");
 	driver.manage().window().maximize();
