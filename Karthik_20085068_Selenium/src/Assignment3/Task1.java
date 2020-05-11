@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import Assignment1.BaseImplementation;
 
 public class Task1 extends BaseImplementation{
-	@Test
+	@Test(groups= {"mandatory","Assignment3"})
 	public void test1() throws IOException, InterruptedException {
 	Task1 ob=new Task1();
 	Properties obj=ob.ReadObjectRepo();

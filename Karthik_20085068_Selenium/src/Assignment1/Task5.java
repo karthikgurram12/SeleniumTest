@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 
 
 public class Task5 {
-	@Test
+	@Test(groups= {"mandatory","Assignment1"})
 	public void test5() throws IOException {
 		// TODO Auto-generated method stub
        // Drag me to my target and drop on the target and verify the text.

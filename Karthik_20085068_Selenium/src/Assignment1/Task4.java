@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 public class Task4 extends BaseImplementation{
 	// TODO Auto-generated method stub
     // Drag me to my target and drop on the target and verify the text.
-	@Test
+	@Test(groups= {"mandatory","Assignment1"})
 	 public void test4() throws IOException {
 	    Task1 ob=new Task1();
 	    Properties obj=ob.ReadObjectRepo();

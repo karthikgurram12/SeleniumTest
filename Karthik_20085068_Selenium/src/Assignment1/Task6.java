@@ -15,8 +15,7 @@ import org.testng.annotations.Test;
 
 public class Task6 {
 	
-	@Test
-	@Parameters({ "sUsername", "sPassword" })
+	@Test(groups= {"mandatory","Assignment1"})
 	public void test6() throws IOException {
 	Task1 ob=new Task1();
 	Properties obj=ob.ReadObjectRepo();

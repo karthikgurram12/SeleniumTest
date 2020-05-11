@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignment3.Task1">
+      <class name="Assignment2.Task1">
         <methods>
-          <include name="test1"/>
+          <include name="signinvalidation" invocation-numbers="0 1"/>
+          <include name="driverclose"/>
+          <include name="test1" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Assignment3.Task1 -->
+      </class> <!-- Assignment2.Task1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

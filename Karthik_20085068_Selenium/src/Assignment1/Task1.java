@@ -18,7 +18,7 @@ public class Task1 extends BaseImplementation{
 
 		// TODO Auto-generated method stub
        //Create a xpath or Css path for this Selectable Item and Click on each of the Items and print the Item Name
-		@Test
+		@Test(groups= {"mandatory","Assignment1"})
 		public void test1() throws IOException {
 		Task1 ob=new Task1();
 		Properties obj=ob.ReadObjectRepo();

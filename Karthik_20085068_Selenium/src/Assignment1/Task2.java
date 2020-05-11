@@ -13,6 +13,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import au.com.bytecode.opencsv.CSVReader;
@@ -20,11 +21,12 @@ import au.com.bytecode.opencsv.CSVReader;
 public class Task2 extends BaseImplementation{
 		// TODO Auto-generated method stub
 		//Please fill this contact form using CSS and Xpath.
-		@Test
+	WebDriver driver=null;
+	@Test(groups= {"mandatory","Assignment1"})
 public void test2() throws IOException {
     Task1 ob=new Task1();
 	Properties obj=ob.ReadObjectRepo();
-	WebDriver driver=ob.driver();
+	 driver=ob.driver();
 	driver.get("https://demoqa.com/html-contact-form/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
@@ -40,8 +42,12 @@ public void test2() throws IOException {
 	driver.findElement(By.linkText(obj.getProperty("googlelink"))).sendKeys(selectLinkOpeninNewTab);
 	driver.findElement(By.linkText(obj.getProperty("googlelink2"))).sendKeys(selectLinkOpeninNewTab);
 	driver.findElement(By.xpath(obj.getProperty("Submitbutton"))).click();
-	System.out.println("Test pass");
-	 driver.close();
+	System.out.println("Test pass");	 
+	}
+	@AfterTest
+	public void driverclose()
+	{
+		driver.close();
 	}
 
 }
