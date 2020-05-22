@@ -21,6 +21,8 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
+        <dependencies>
+</dependencies>
       </plugin>
     </plugins>
   </build>

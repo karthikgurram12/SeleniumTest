@@ -7,7 +7,7 @@
   <test thread-count="2" name="Test" >
 <classes>
 <class name="Assignment1.Task1" />
-<class name="Assignment3.Task1" />
+<class name="Assignment1.Task2" />
 </classes> 
   </test> <!-- Test -->
 </suite> <!-- Suite -->
