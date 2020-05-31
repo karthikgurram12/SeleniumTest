@@ -2,85 +2,151 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87058" started-at="2020-05-22T10:33:40 IST" finished-at="2020-05-22T10:35:07 IST">
+  <suite name="Default suite" duration-ms="7354" started-at="2020-05-24T08:20:01 IST" finished-at="2020-05-24T08:20:08 IST">
     <groups>
       <group name="Assignment3">
-        <method signature="Task1.test1()[pri:0, instance:Assignment3.Task1@4973813a]" name="test1" class="Assignment3.Task1"/>
+        <method signature="Task1.test1()[pri:0, instance:Assignment3.Task1@cd2dae5]" name="test1" class="Assignment3.Task1"/>
       </group> <!-- Assignment3 -->
       <group name="mandatory">
-        <method signature="Task1.test1()[pri:0, instance:Assignment3.Task1@4973813a]" name="test1" class="Assignment3.Task1"/>
+        <method signature="Task1.test1()[pri:0, instance:Assignment3.Task1@cd2dae5]" name="test1" class="Assignment3.Task1"/>
       </group> <!-- mandatory -->
     </groups>
-    <test name="Default test" duration-ms="87058" started-at="2020-05-22T10:33:40 IST" finished-at="2020-05-22T10:35:07 IST">
+    <test name="Default test" duration-ms="7354" started-at="2020-05-24T08:20:01 IST" finished-at="2020-05-24T08:20:08 IST">
       <class name="Assignment3.Task1">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Assignment3.Task1@4973813a]" name="setUp" is-config="true" duration-ms="765" started-at="2020-05-22T10:33:39 IST" finished-at="2020-05-22T10:33:40 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Assignment3.Task1@cd2dae5]" name="setUp" is-config="true" duration-ms="152" started-at="2020-05-24T08:20:01 IST" finished-at="2020-05-24T08:20:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="test1()[pri:0, instance:Assignment3.Task1@4973813a]" name="test1" duration-ms="85395" started-at="2020-05-22T10:33:40 IST" finished-at="2020-05-22T10:35:06 IST">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="test1()[pri:0, instance:Assignment3.Task1@cd2dae5]" name="test1" duration-ms="7304" started-at="2020-05-24T08:20:01 IST" finished-at="2020-05-24T08:20:08 IST">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[chrome not reachable
+              <![CDATA[session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=83.0.4103.61)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'KARTHIK-PC', ip: '192.168.43.147', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
 Driver info: driver.version: ChromeDriver
 remote stacktrace: Backtrace:
-Ordinal0 [0x01629563+2725219]
-Ordinal0 [0x01528551+1672529]
-Ordinal0 [0x01410202+524802]
-Ordinal0 [0x014098EA+497898]
-Ordinal0 [0x013A071A+67354]
-Ordinal0 [0x0139D32C+54060]
-Ordinal0 [0x013BCC37+183351]
-Ordinal0 [0x013BCA3D+182845]
-Ordinal0 [0x013BA94B+174411]
-Ordinal0 [0x013A2528+75048]
-Ordinal0 [0x013A35A0+79264]
-Ordinal0 [0x013A3539+79161]
-Ordinal0 [0x0153D607+1758727]
-GetHandleVerifier [0x01746546+1050150]
-GetHandleVerifier [0x01746291+1049457]
-GetHandleVerifier [0x017510D7+1094071]
-GetHandleVerifier [0x01746B46+1051686]
-Ordinal0 [0x01535B06+1727238]
-Ordinal0 [0x0153EB7B+1764219]
-Ordinal0 [0x0153ECE3+1764579]
-Ordinal0 [0x01554C05+1854469]
-BaseThreadInitThunk [0x75C733AA+18]
-RtlInitializeExceptionChain [0x77879F72+99]
-RtlInitializeExceptionChain [0x77879F45+54]
+Ordinal0 [0x01119563+2725219]
+Ordinal0 [0x01018551+1672529]
+Ordinal0 [0x00F00359+525145]
+Ordinal0 [0x00EF8579+492921]
+Ordinal0 [0x00EF818C+491916]
+Ordinal0 [0x00EF7AB8+490168]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFF055+520277]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFD83E+514110]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFBBF6+506870]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFB1B7+504247]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EF337C+471932]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF6A87+486023]
+Ordinal0 [0x00F00FF0+528368]
+Ordinal0 [0x00EAD6C9+186057]
+Ordinal0 [0x00EACA3D+182845]
+Ordinal0 [0x00EAA94B+174411]
+Ordinal0 [0x00E92528+75048]
+Ordinal0 [0x00E935A0+79264]
+Ordinal0 [0x00E93539+79161]
+Ordinal0 [0x0102D607+1758727]
+GetHandleVerifier [0x01236546+1050150]
+GetHandleVerifier [0x01236291+1049457]
+GetHandleVerifier [0x012410D7+1094071]
+GetHandleVerifier [0x01236B46+1051686]
+Ordinal0 [0x01025B06+1727238]
+Ordinal0 [0x0102EB7B+1764219]
+Ordinal0 [0x0102ECE3+1764579]
+Ordinal0 [0x01044C05+1854469]
+BaseThreadInitThunk [0x769833AA+18]
+RtlInitializeExceptionChain [0x77BD9F72+99]
+RtlInitializeExceptionChain [0x77BD9F45+54]
 ]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created
+from disconnected: received Inspector.detached event
+  (Session info: chrome=83.0.4103.61)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'KARTHIK-PC', ip: '192.168.43.147', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
 Driver info: driver.version: ChromeDriver
 remote stacktrace: Backtrace:
-Ordinal0 [0x01629563+2725219]
-Ordinal0 [0x01528551+1672529]
-Ordinal0 [0x01410202+524802]
-Ordinal0 [0x014098EA+497898]
-Ordinal0 [0x013A071A+67354]
-Ordinal0 [0x0139D32C+54060]
-Ordinal0 [0x013BCC37+183351]
-Ordinal0 [0x013BCA3D+182845]
-Ordinal0 [0x013BA94B+174411]
-Ordinal0 [0x013A2528+75048]
-Ordinal0 [0x013A35A0+79264]
-Ordinal0 [0x013A3539+79161]
-Ordinal0 [0x0153D607+1758727]
-GetHandleVerifier [0x01746546+1050150]
-GetHandleVerifier [0x01746291+1049457]
-GetHandleVerifier [0x017510D7+1094071]
-GetHandleVerifier [0x01746B46+1051686]
-Ordinal0 [0x01535B06+1727238]
-Ordinal0 [0x0153EB7B+1764219]
-Ordinal0 [0x0153ECE3+1764579]
-Ordinal0 [0x01554C05+1854469]
-BaseThreadInitThunk [0x75C733AA+18]
-RtlInitializeExceptionChain [0x77879F72+99]
-RtlInitializeExceptionChain [0x77879F45+54]
+Ordinal0 [0x01119563+2725219]
+Ordinal0 [0x01018551+1672529]
+Ordinal0 [0x00F00359+525145]
+Ordinal0 [0x00EF8579+492921]
+Ordinal0 [0x00EF818C+491916]
+Ordinal0 [0x00EF7AB8+490168]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFF055+520277]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFD83E+514110]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFBBF6+506870]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EFB1B7+504247]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF7739+489273]
+Ordinal0 [0x00EF6EFE+487166]
+Ordinal0 [0x00EF7135+487733]
+Ordinal0 [0x00EF6B75+486261]
+Ordinal0 [0x00EF337C+471932]
+Ordinal0 [0x00EF6B32+486194]
+Ordinal0 [0x00EF6A87+486023]
+Ordinal0 [0x00F00FF0+528368]
+Ordinal0 [0x00EAD6C9+186057]
+Ordinal0 [0x00EACA3D+182845]
+Ordinal0 [0x00EAA94B+174411]
+Ordinal0 [0x00E92528+75048]
+Ordinal0 [0x00E935A0+79264]
+Ordinal0 [0x00E93539+79161]
+Ordinal0 [0x0102D607+1758727]
+GetHandleVerifier [0x01236546+1050150]
+GetHandleVerifier [0x01236291+1049457]
+GetHandleVerifier [0x012410D7+1094071]
+GetHandleVerifier [0x01236B46+1051686]
+Ordinal0 [0x01025B06+1727238]
+Ordinal0 [0x0102EB7B+1764219]
+Ordinal0 [0x0102ECE3+1764579]
+Ordinal0 [0x01044C05+1854469]
+BaseThreadInitThunk [0x769833AA+18]
+RtlInitializeExceptionChain [0x77BD9F72+99]
+RtlInitializeExceptionChain [0x77BD9F45+54]
 
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -108,7 +174,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-at Assignment1.BaseImplementation.driver(BaseImplementation.java:78)
+at Assignment1.BaseImplementation.driver(BaseImplementation.java:82)
 at Assignment3.Task1.test1(Task1.java:25)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -140,23 +206,23 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:Assignment3.Task1@4973813a]" name="getResult" is-config="true" duration-ms="834" started-at="2020-05-22T10:35:06 IST" finished-at="2020-05-22T10:35:07 IST">
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:Assignment3.Task1@cd2dae5]" name="getResult" is-config="true" duration-ms="6" started-at="2020-05-24T08:20:08 IST" finished-at="2020-05-24T08:20:08 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=FAILURE method=Task1.test1()[pri:0, instance:Assignment3.Task1@4973813a] output={null}]]]>
+                <![CDATA[[TestResult name=test1 status=FAILURE method=Task1.test1()[pri:0, instance:Assignment3.Task1@cd2dae5] output={null}]]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at Assignment1.BaseImplementation.getScreenshot(BaseImplementation.java:92)
-at Assignment1.BaseImplementation.getResult(BaseImplementation.java:60)
+at Assignment1.BaseImplementation.getScreenshot(BaseImplementation.java:97)
+at Assignment1.BaseImplementation.getResult(BaseImplementation.java:63)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -196,7 +262,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="testReport()[pri:0, instance:Assignment3.Task1@4973813a]" name="testReport" is-config="true" duration-ms="6166" started-at="2020-05-22T10:35:09 IST" finished-at="2020-05-22T10:35:16 IST">
+        <test-method status="PASS" signature="testReport()[pri:0, instance:Assignment3.Task1@cd2dae5]" name="testReport" is-config="true" duration-ms="331" started-at="2020-05-24T08:20:08 IST" finished-at="2020-05-24T08:20:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReport -->

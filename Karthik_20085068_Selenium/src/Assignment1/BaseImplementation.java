@@ -41,6 +41,8 @@ public class BaseImplementation {
 //for extent report generation	
 	@BeforeSuite
 	public void setUp() {
+		
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		extent = new ExtentReports(System.getProperty("user.dir") + "\\ExtentOutput\\Extentreports.html", true);
 		extent.addSystemInfo("Host Name", "Karthik").addSystemInfo("Environment", "Automation Testing")
 				.addSystemInfo("User Name", "karthik");
@@ -50,6 +52,7 @@ public class BaseImplementation {
 
 	@AfterMethod
 	public void getResult(ITestResult result) throws IOException, Exception {
+		logger.log(LogStatus.INFO, "checking whether test is passed or not, if test is failed attaching the screenshot");
 		if (result.getStatus() == ITestResult.FAILURE) {
 			logger.log(LogStatus.FAIL, "Testcase failed is: " + result.getName());
 			logger.log(LogStatus.FAIL, "Testcase failed is: " + result.getThrowable());
@@ -68,11 +71,12 @@ public class BaseImplementation {
 
 	@AfterSuite
 	public void testReport() {
+		logger.log(LogStatus.INFO, "flushing entire extent data");
 		extent.flush();
 	}
 
 	public WebDriver driver() throws IOException {
-		
+		logger.log(LogStatus.INFO, "driver creation");
 		if (ReadBrowserType().getProperty("browser").equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
 			driver = new ChromeDriver();
@@ -87,6 +91,7 @@ public class BaseImplementation {
 	public static String getScreenshot(WebDriver driver, String screenshotName) throws Exception {
 		// below line is just to append the date format with the screenshot name to
 		// avoid duplicate names
+		logger.log(LogStatus.INFO, "taking screenshot");
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -100,7 +105,7 @@ public class BaseImplementation {
 	}
 
 	public String[] ReadData(String usertype) throws IOException {
-
+		logger.log(LogStatus.INFO, "reading the user data");
 		String[] str = null;
 		CSVReader reader = new CSVReader(new FileReader(System.getProperty("user.dir") + "\\src\\Data\\data.csv"));
 
@@ -124,7 +129,7 @@ public class BaseImplementation {
 	}
 
 	public String[] ReadOlayData(String usertype) throws IOException {
-
+		logger.log(LogStatus.INFO, "Reading the olay data for germany country");
 		String[] str = null;
 		CSVReader reader = new CSVReader(new FileReader(System.getProperty("user.dir") + "\\src\\Data\\OlayData.csv"));
 
@@ -148,6 +153,7 @@ public class BaseImplementation {
 	}
 
 	public Properties ReadObjectRepo() throws IOException {
+		logger.log(LogStatus.INFO, "reading the element xpaths from objectRepository");
 		Properties obj = new Properties();
 		FileInputStream objfile = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\Object_Repository\\ObjectReporitory.properties");
@@ -156,6 +162,7 @@ public class BaseImplementation {
 	}
 
 	public Properties ReadBrowserType() throws IOException {
+		logger.log(LogStatus.INFO, "reading browser data");
 		Properties obj = new Properties();
 		FileInputStream objfile = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\Data\\browser.properties");
@@ -164,6 +171,7 @@ public class BaseImplementation {
 	}
 
 	public String ReadUserData(String value) throws IOException {
+		logger.log(LogStatus.INFO, "reading general userdata");
 		Properties obj = new Properties();
 		FileInputStream objfile = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\Data\\UserData.properties");
@@ -173,6 +181,7 @@ public class BaseImplementation {
 	}
 
 	public Properties ReadCountry() throws IOException {
+		logger.log(LogStatus.INFO, "reading country name");
 		Properties obj = new Properties();
 		FileInputStream objfile = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\Data\\country.properties");
@@ -181,6 +190,7 @@ public class BaseImplementation {
 	}
 
 	public Properties ReadOlayProperties() throws IOException {
+		logger.log(LogStatus.INFO, "reading data for spain from olay properties file");
 		Properties obj = new Properties();
 		FileInputStream objfile = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\Data\\OlayData.properties");
@@ -190,7 +200,7 @@ public class BaseImplementation {
 
 	public void registerOlay(String email, String pass, String confirmpass, String day, String month, String year,
 			WebDriver driver) throws IOException {
-
+		logger.log(LogStatus.INFO, "register for UK olay site");
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("Register"))).click();
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("registeremail"))).sendKeys(email);
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("registerpass"))).sendKeys(pass);
@@ -210,7 +220,7 @@ public class BaseImplementation {
 
 	public void registerOlayGermany(String fn, String sn, String email, String pass, String confirmpass, String day,
 			String month, String year, String strabe, String postle, String ort, WebDriver driver) throws IOException {
-
+		logger.log(LogStatus.INFO, "register for Germany olay site");
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("Register"))).click();
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("gender"))).click();
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("vorname"))).sendKeys(fn);
@@ -238,7 +248,7 @@ public class BaseImplementation {
 	}
 
 	public void registerOlaySpain(WebDriver driver) throws IOException {
-
+		logger.log(LogStatus.INFO, "register for Spain olay site");
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("Register"))).click();
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("gender"))).click();
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("vorname")))
@@ -262,6 +272,7 @@ public class BaseImplementation {
 	}
 
 	public void signoutOlay(WebDriver driver) throws IOException {
+		logger.log(LogStatus.INFO, "signout method for olay web application");
 		WebElement signout = driver.findElement(By.xpath(ReadObjectRepo().getProperty("signout")));
 		signout.click();
 		WebElement confirmsignout = driver.findElement(By.xpath(ReadObjectRepo().getProperty("signoutconfirm")));
@@ -275,6 +286,7 @@ public class BaseImplementation {
 	}
 
 	public void signinOlay(String email, String pass, WebDriver driver) throws IOException {
+		logger.log(LogStatus.INFO, "signin method for olay web application");
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("signin"))).click();
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("signinemail"))).sendKeys(email);
 		driver.findElement(By.xpath(ReadObjectRepo().getProperty("signinpassword"))).sendKeys(pass);
@@ -284,6 +296,7 @@ public class BaseImplementation {
 	}
 
 	public void jsclick(WebDriver driver, String value) throws IOException {
+		logger.log(LogStatus.INFO, "clicking element by using javascript click");
 		WebElement element = driver.findElement(By.xpath(ReadObjectRepo().getProperty(value)));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", element);
