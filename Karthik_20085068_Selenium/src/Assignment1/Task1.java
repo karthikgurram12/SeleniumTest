@@ -40,7 +40,6 @@ public class Task1 extends BaseImplementation {
 		driver.get("https://demoqa.com/selectable/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		List<WebElement> list = driver.findElements(By.xpath(obj.getProperty("SelectableItem")));
 		for (WebElement webElement : list) {
 			String name = webElement.getText();

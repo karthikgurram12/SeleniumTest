@@ -19,7 +19,7 @@ import Assignment1.BaseImplementation;
 public class Task1 extends BaseImplementation {
 	@Test(groups = { "mandatory", "Assignment3" })
 	public void test1() throws IOException, InterruptedException {
-		logger = extent.startTest("Assignment_test1");
+		logger=extent.startTest("Assignment3.Task1");
 		Task1 ob = new Task1();
 		Properties obj = ob.ReadObjectRepo();
 		WebDriver driver = ob.driver();

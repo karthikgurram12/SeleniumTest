@@ -26,7 +26,7 @@ public class Task1 extends BaseImplementation {
 
 	@DataProvider(name = "RegisterandLoginData")
 	public static Object[][] credentials() {
-		return new Object[][] { { "karthik1@gmail.com", "Qwerty@1", "Qwerty@1", "11", "5", "1992" } };
+		return new Object[][] { { "karthik123@gmail.com", "Qwerty@1", "Qwerty@1", "11", "5", "1992" } };
 	}
 
 	@Test(groups = { "mandatory", "Assignment2" }, dataProvider = "RegisterandLoginData", priority = 0)
@@ -36,7 +36,8 @@ public class Task1 extends BaseImplementation {
 		Task1 ob = new Task1();
 		Properties obj = ob.ReadObjectRepo();
 		driver = ob.driver();
-		if (ob.ReadCountry().getProperty("country").equalsIgnoreCase("UK")) {
+		String country=ob.ReadCountry().getProperty("country");
+		if (country.equalsIgnoreCase("UK")) {
 			driver.get("https://www.olay.co.uk/en-gb");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -45,7 +46,7 @@ public class Task1 extends BaseImplementation {
 			ob.signinOlay(email, pass, driver);
 			ob.signoutOlay(driver);
 
-		} else if (ob.ReadCountry().getProperty("country").equalsIgnoreCase("Germany")) {
+		} else if (country.equalsIgnoreCase("Germany")) {
 			driver.get("https://www.olaz.de/de-de");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -56,7 +57,7 @@ public class Task1 extends BaseImplementation {
 			ob.signoutOlay(driver);
 			ob.signinOlay(Email, Pass, driver);
 			ob.signoutOlay(driver);
-		} else if (ob.ReadCountry().getProperty("country").equalsIgnoreCase("Spain")) {
+		} else if (country.equalsIgnoreCase("Spain")) {
 			driver.get("https://www.olay.es/es-es");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
